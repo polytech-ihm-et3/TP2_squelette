@@ -43,9 +43,11 @@ L'interface de ce sélecteur de fichier doit contenir :
 
 > Dans IntelliJ, allez dans *File* > *New* > *Project...* et selectionnez *JavaFX Application*, dans l'onglet "JavaFX".
 
-3. Créez un nouveau fichier "window.fxml", puis éditez-le avec *Scene Builder*. Créez alors votre fenêtre pour qu'elle ressemble au maximum à l'image présentée ci-dessus (Vous pouvez vous aider de ce [*tutoriel*]()).
+3. Créez un nouveau fichier "window.fxml", puis éditez-le avec *Scene Builder*. Créez alors votre fenêtre pour qu'elle ressemble au maximum à l'image présentée ci-dessus (Vous pouvez vous aider de ce [*tutoriel*](https://github.com/polytech-ihm-et3/TP2_squelette/tree/main/slides/tuto_scenebuilder.pdf)).
 
-4. Ajoutez une classe "Controller à votre projet et déclarez celle-ci comme étant le controlleur du fichier *fxml*" "controller" comme controlleur de votre application.
+4. Ajoutez une classe "Controller à votre projet et déclarez celle-ci comme étant le controlleur du fichier *fxml*.
+
+> Créez une classe "*Controller*" et créez 
 { Donner un fx:id au dierente parties composant votre Vue (boutton,
 comboBox, etc..).
 
