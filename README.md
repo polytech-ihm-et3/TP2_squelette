@@ -59,3 +59,10 @@ L'interface de ce sélecteur de fichier doit contenir :
 7. Faites en sorte que le bouton "*Open*" ne soit cliquable qu'à condition que l'un des éléments de la liste navigable soit sélectionné.
 
 8. Assurez vous que, si l'utilisateur clique sur le bouton "*Cancel*", la fenêtre se ferme.
+
+9. Faites en sorte qu'après avoir sélectionner un élément de la liste navigable, un clique sur le bouton "*Open*" déclenche une des actions suivantes :
+    - si l'élément sélectionné est un fichier : aucun effet;
+    - si l'élément sélectionné est un répertoire : celui-ci devient le répertoire courant. L'interface doit alors se mettre à jour;
+    - si l'élément sélectionné n'est ni un fichier, ni un répertoire : aucun effet.
+
+10. Améliorez votre implémentation pour qu'un double clique sur un élement de la liste navigable ait le même effet qu'un clique sur le bouton "Open", après avoir sélectionné ce même élément.
