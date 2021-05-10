@@ -45,50 +45,19 @@ L'interface de ce sélecteur de fichier doit contenir :
 
 3. Créez un nouveau fichier "window.fxml", puis éditez-le avec *Scene Builder*. Créez alors votre fenêtre pour qu'elle ressemble au maximum à l'image présentée ci-dessus (Vous pouvez vous aider de ce [*tutoriel*](https://github.com/polytech-ihm-et3/TP2_squelette/tree/main/slides/tuto_scenebuilder.pdf)).
 
-4. Ajoutez une classe "Controller à votre projet et déclarez celle-ci comme étant le controlleur du fichier *fxml*.
+4. Ajoutez une classe "*Controller*" à votre projet et déclarez celle-ci comme étant le controlleur du fichier *fxml*.
 
-> Créez une classe "*Controller*" et créez 
-{ Donner un fx:id au dierente parties composant votre Vue (boutton,
-comboBox, etc..).
+> Créez une classe "*Controller*" et liez les éléments modifiables de l'interface à des attributs de cette classe en utilisant l'annotation [*@FXML*](https://docs.oracle.com/javafx/2/get_started/fxml_tutorial.htm). Les noms des attributs doivent correspondre aux noms indiqués dans les champs *fx:id*, lors de la création de la fenêtre. Il vous faudra aussi lier une méthode "*Initialize()*".
+> Ajoutez un champs *fx:controller="[chemin jusqu'au].Controller"* à l'interieur de la balise correspondant au [*Pane*](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Pane.html) principal (Vous pouvez vous aider de ce [*tutoriel*](https://github.com/polytech-ihm-et3/TP2_squelette/tree/main/slides/tuto_scenebuilder.pdf)).
 
-3. Assurez-vous que les éléments graphiques sont correctement alignés et que leurs positions sont cohérentent avec la photo suivante lorsque vous changez la taille de la fenêtre.
+5. Ajouter le fichier *FileSelector* à votre projet.
 
-<br><div align="center"><img src="images/tempconvV.jpg" width="150"></img></div><br>
+> On remarquera que la classe *FileSelector* possède deux méthodes intéressantes :
+>   - La méthode *getListParentRepositories(String path)* : cette méthode renvoie une [*ArrayList*](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) contenant les chemins des dossiers parents d'un dossier courant, indiqué en paramètre. Par exemple, pour un dossier *C:\rep1\rep2\rep3\*, la méthode renverra les chemins suivants : *C:\*, *C:\rep1\* et *C:\rep1\rep2\*
+>   - La méthode *getContent(String path)* : cette méthode renvoie une [*ArrayList*](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) contenant les différents éléments présents dans un dossier courant, indiqué en paramètre.
 
-4. Le `textFieldCListener` réalise les actions suivantes si l'utilisateur appuie sur la touche *ENTRÉE*, alors que le focus est sur textFieldC :
+6. Implémentez la méthode "*Initialize()*" pour vous assurer que, lorsque l'utilisateur sélectionne un dossier dans le menu déroulant, la liste navigable et le menu déroulant se mettent bien à jour (ils doivent alors représenter le nouveau dossier courant).
 
- - lire la valeur indiquée dans le champs de texte correspondant à la valeur en *Celsius*;
- - transformer cette valeur en float (attention à la gestion des exceptions !);
- - convertir cette valeur en *Fahrenheit*;
- - écrire cette nouvelle valeur dans le champs de texte correspondant à la valeur en *Fahrenheit*.
+7. Faites en sorte que le bouton "*Open*" ne soit cliquable qu'à condition que l'un des éléments de la liste navigable soit sélectionné.
 
-    Associez le `textFieldCListener` au champs de texte correspondant à la valeur en *Celsius*.
-
-> Ici, le listener en question surveille les touches du clavier. Il s'agit donc d'un [*EventHandler*](https://docs.oracle.com/javase/8/javafx/api/javafx/event/EventHandler.html) qui surveille les [*KeyEvents*](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/input/KeyEvent.html). On peut créer ce listener en utilisant :
-> ```Java
-> textFieldFListener = new EventHandler<KeyEvent>() 
-> {
->    @Override
->    public void handle(KeyEvent e) 
->    {
->       //Ce que fait le listener en cas de KeyEvent
->    }
-> ```
-> Pour associer un Listener à un champs de texte, vous pouvez utiliser la méthode [*setOnKeyPressed*](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Node.html#setOnKeyPressed-javafx.event.EventHandler-).
-
-5. Implémentez le `textFieldFListener` pour qu'il réalise les actions suivantes si l'utilisateur appuie sur la touche *ENTRÉE*, alors que le focus est sur textFieldF :
-
- - lire la valeur indiquée dans le champs de texte correspondant à la valeur en *Fahrenheit*;
- - transformer cette valeur en float (attention à la gestion des exceptions !);
- - convertir cette valeur en *Celsius*;
- - écrire cette nouvelle valeur dans le champs de texte correspondant à la valeur en *Celsius*.
-
-    Associez le `textFieldFListener` au champs de texte correspondant à la valeur en *Fahrenheit*.
-
-6. Le `buttonCloseListener` quitte l'application . Associez-le au bouton *Close*.
-
-> Ici, le listener en question surveille l'action liée à un bouton. Il s'agit donc d'un [*EventHandler*](https://docs.oracle.com/javase/8/javafx/api/javafx/event/EventHandler.html) qui surveille les [*ActionEvents*](https://docs.oracle.com/javase/8/javafx/api/javafx/event/ActionEvent.html).
-
-7. Implémentez le `buttonResetListener` pour qu'il vide les deux champs de texte. Associez-le au bouton *Reset*.
-
-8. (Bonus) Associez un [*TextFormatter*](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextFormatter.html) aux deux champs de texte pour qu'ils n'acceptent que des entrées valides (e.g. 23, 23.345, -21, 3E -02).
+8. Assurez vous que, si l'utilisateur clique sur le bouton "*Cancel*", la fenêtre se ferme.
