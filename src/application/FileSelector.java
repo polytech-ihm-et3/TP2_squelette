@@ -21,7 +21,7 @@ public class FileSelector extends DialogPane
     }
 
     // Retourne une Arraylist des parents du fichier Path
-    public ArrayList<String> getListRepParent(String path)
+    public ArrayList<String> getListParentRepositories(String path)
     {
         String actualPath = "";
         File dir = new File(path) ;
@@ -53,7 +53,7 @@ public class FileSelector extends DialogPane
     }
 
     //retourne une arraylist des fichier present dans le dossier Path
-    public ArrayList<String> getListFile(String path){
+    public ArrayList<String> getContent(String path){
     	
 
         File dir = new File(path) ;

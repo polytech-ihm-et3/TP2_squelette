@@ -87,7 +87,7 @@ public class Controller
     public void majComboBox(String path)
     {
     	//Récupérer les repertoires à afficher dans la ComboBox
-		ObservableList<String> itemsComboRep =  FXCollections.observableArrayList(fileSelector.getListRepParent(path));
+		ObservableList<String> itemsComboRep =  FXCollections.observableArrayList(fileSelector.getListParentRepositories(path));
 		
 		//Changer les items de la ComboBox
 		comboxRep.setItems(itemsComboRep);
@@ -102,7 +102,7 @@ public class Controller
     	if (comboxRep.getSelectionModel().getSelectedItem() != null )
     	{
 	    	//Récupérer les éléments à afficher dans la ListView
-			ObservableList<String> itemsListView = FXCollections.observableArrayList(fileSelector.getListFile(path));
+			ObservableList<String> itemsListView = FXCollections.observableArrayList(fileSelector.getContent(path));
 			
 			//Changer les items de la ListView
 			listViewFile.setItems(itemsListView);
