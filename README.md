@@ -4,7 +4,7 @@ Polytech Paris-Saclay | 2020-21
 
 ___
 
-# TP1
+# TP2
 
 L'objectif de ce TP est de créer un sélecteur de fichiers, avec une interface proche de la figure suivante :
 
@@ -14,8 +14,6 @@ L'interface de ce sélecteur de fichier doit contenir :
   - un menu déroulant (cf. [*ComboBox*](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/ComboBox.html)), contenant une liste de tous les dossiers parents du dossier courant;
   - une liste navigable (cf. [*ListeView*](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/ListView.html)), qui montre le contenu du dossier courant (les noms des sous-dossiers sont suivis pas un slash `/`); 
   - deux boutons (cf. [*Button*](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Button.html)), "Cancel" (pour fermer l'application) et "Open" (pour ouvrir un dossier sélectionné).
-
-<br><div align="center"><img src="images/tempconvH.jpg" width="300"></img></div><br>
 
 1. Télécharger [*Scene Builder*](https://gluonhq.com/products/scene-builder/). Ce programmee permet de creer des fenêtres JavaFX plus facilement.
 
