@@ -41,12 +41,12 @@ L'interface de ce sélecteur de fichier doit contenir :
 
 > Dans IntelliJ, allez dans *File* > *New* > *Project...* et selectionnez *JavaFX Application*, dans l'onglet "JavaFX".
 
-3. Créez un nouveau fichier "window.fxml", puis éditez-le avec *Scene Builder*. Créez alors votre fenêtre pour qu'elle ressemble au maximum à l'image présentée ci-dessus (Vous pouvez vous aider de ce [*tutoriel*](https://github.com/polytech-ihm-et3/TP2_squelette/tree/main/slides/tuto_scenebuilder.pdf)).
+3. Créez un nouveau fichier "window.fxml", puis éditez-le avec *Scene Builder*. Créez alors votre fenêtre pour qu'elle ressemble au maximum à l'image présentée ci-dessus (Vous pouvez vous aider de ce [*tutoriel*](https://github.com/polytech-ihm-et3/TP2_squelette/tree/main/slides/slides.pdf)).
 
 4. Ajoutez une classe "*Controller*" à votre projet et déclarez celle-ci comme étant le controlleur du fichier *fxml*.
 
 > Créez une classe "*Controller*" et liez les éléments modifiables de l'interface à des attributs de cette classe en utilisant l'annotation [*@FXML*](https://docs.oracle.com/javafx/2/get_started/fxml_tutorial.htm). Les noms des attributs doivent correspondre aux noms indiqués dans les champs *fx:id*, lors de la création de la fenêtre. Il vous faudra aussi lier une méthode "*Initialize()*".
-> Ajoutez un champs *fx:controller="[chemin jusqu'au].Controller"* à l'interieur de la balise correspondant au [*Pane*](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Pane.html) principal (Vous pouvez vous aider de ce [*tutoriel*](https://github.com/polytech-ihm-et3/TP2_squelette/tree/main/slides/tuto_scenebuilder.pdf)).
+> Ajoutez un champs *fx:controller="[chemin jusqu'au].Controller"* à l'interieur de la balise correspondant au [*Pane*](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/Pane.html) principal (Vous pouvez vous aider de ce [*tutoriel*](https://github.com/polytech-ihm-et3/TP2_squelette/tree/main/slides/slides.pdf)).
 
 5. Ajouter le fichier *FileSelector* à votre projet.
 
