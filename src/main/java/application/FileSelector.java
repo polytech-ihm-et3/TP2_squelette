@@ -5,7 +5,6 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class FileSelector extends DialogPane {
-	private String currentDirectory = null;
 	private ArrayList<String> listContent;
 	private ArrayList<String> listParentDirectories;
 
@@ -31,15 +30,12 @@ public class FileSelector extends DialogPane {
 			return null;
 		}
 
-		// Si un dossier existe, on le définit comme dossier courant
-		currentDirectory = pathDirectory.getAbsolutePath();
-
 		String parentDirectoryPath = "";
 		listParentDirectories.clear();
 
 		// On divise le chemin grâce à un séparateur
 		String[] directories = path.split("\\" + File.separator); // Version Windows
-		// String[] directories = path.split(File.separator); //Version Mac/Linux
+		// String[] directories = path.split(File.separator); // Version Mac/Linux
 
 		// On récupère les dossiers parents en ajoutant les éléments du chemin au fur et
 		// à mesure
@@ -66,9 +62,6 @@ public class FileSelector extends DialogPane {
 		if (!pathDirectory.exists() || !pathDirectory.isDirectory()) {
 			return null;
 		}
-
-		// Si un dossier existe, on le définit comme dossier courant
-		currentDirectory = pathDirectory.getAbsolutePath();
 
 		// On liste les éléments du dossier
 		String[] files = pathDirectory.list();
