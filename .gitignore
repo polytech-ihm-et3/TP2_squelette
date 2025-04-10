@@ -1,1 +1,13 @@
-bin/
+# VSCode files
+# .vscode
+.vscode/settings.json
+.vscode/ltex*
+
+# IntelliJ files
+.idea
+.mvn
+mvnw
+mvnw.cmd
+
+# Output things ?
+target
