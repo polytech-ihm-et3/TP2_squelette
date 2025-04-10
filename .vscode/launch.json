@@ -8,7 +8,7 @@
             "type": "java",
             "name": "Launch",
             "request": "launch",
-            "mainClass": "app/app.Main",
+            "mainClass": "application/application.Main",
             "projectName": "file_selector",
             "preLaunchTask": "Maven create target"
         }

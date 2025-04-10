@@ -17,15 +17,15 @@ L'interface de ce sélecteur de fichier doit contenir :
 
 1. [*Scene Builder*](https://gluonhq.com/products/scene-builder/) est un programme permet de créer des fenêtres JavaFX plus facilement. Suivez ces instructions (https://github.com/polytech-ihm-et3/HowToUseSceneBuilderWithIDE) pour l'installer et le configurer avec votre IDE.
 
-2. Clonez ce projet de la même manière que le TP1, en suivant les instructions sur https://github.com/polytech-ihm-et3/HowToUseJavaFxWithIDE.
+2. Clonez ce projet et configurez votre IDE de la même manière que le TP1, en suivant les instructions sur https://github.com/polytech-ihm-et3/HowToUseJavaFxWithIDE.
 
     **Il est normal que le projet ne compile pas pour l'instant car *window.fxml* est vide**.
 
     Le projet est structuré ainsi :
-   - les fichiers de code sont localisés dans le dossier *src/main/java/app*, dans lequel il y a deux fichiers :
-     - *Main.java*, qui est le point d'entrée de l'application JavaFX et qui contient le code minimal pour charger le graphe de scène (précisé dans *window.fxml*) de l'application et l'afficher.
+   - les fichiers de code sont localisés dans le dossier *src/main/java/application*, dans lequel il y a deux fichiers :
+     - *Main.java*, qui est le point d'entrée de l'application JavaFX et qui contient le code minimal pour charger le graphe de scène de l'application (précisé dans *window.fxml*) et l'afficher.
      - *FileSelector.java*, qui vous servira plus tard dans le TP.
-   - les fichiers utilisés par le code mais qui ne sont pas des fichiers Java sont localisés dans le dossier *src/main/resources/app*, dans lequel il y a un fichier :
+   - les fichiers utilisés par le code mais qui ne sont pas des fichiers Java sont localisés dans le dossier *src/main/resources/application*, dans lequel il y a un fichier :
      - *window.fxml*, qui contient le graphe de scène de l'application (pour l'instant vide).
 
 3. Éditez le fichier *window.fxml* avec *Scene Builder*. Créez alors votre fenêtre pour qu'elle ressemble au maximum à l'image présentée ci-dessus (Vous pouvez vous aider de ce [*tutoriel*](https://github.com/polytech-ihm-et3/TP2_squelette/tree/main/slides/slides.pdf)).

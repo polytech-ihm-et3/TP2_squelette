@@ -1,4 +1,4 @@
-package app;
+package application;
 
 import javafx.scene.control.DialogPane;
 import java.io.File;
