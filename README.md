@@ -25,15 +25,15 @@ L'interface de ce sélecteur de fichier doit contenir :
    - les fichiers de code sont localisés dans le dossier *src/main/java/application*, dans lequel il y a deux fichiers :
      - *Main.java*, qui est le point d'entrée de l'application JavaFX et qui contient le code minimal pour charger le graphe de scène de l'application (précisé dans *window.fxml*) et l'afficher.
      - *FileSelector.java*, qui vous servira plus tard dans le TP.
-   - les fichiers utilisés par le code mais qui ne sont pas des fichiers Java sont localisés dans le dossier *src/main/resources/application*, dans lequel il y a un fichier :
+   - les fichiers utilisés par le code, qui ne sont pas des fichiers Java sont localisés dans le dossier *src/main/resources/application*, dans lequel il y a un fichier :
      - *window.fxml*, qui contient le graphe de scène de l'application (pour l'instant vide).
 
-3. Éditez le fichier *window.fxml* avec *Scene Builder*. Créez alors votre fenêtre pour qu'elle ressemble au maximum à l'image présentée ci-dessus (Vous pouvez vous aider de ce [*tutoriel*](https://github.com/polytech-ihm-et3/TP2_squelette/tree/main/slides/slides.pdf)).
+3. Éditez le fichier *window.fxml* avec *Scene Builder*. Créez alors votre fenêtre pour qu'elle ressemble au maximum à l'image présentée ci-dessus (Vous pouvez vous aider du tutoriel dans le dossier *slides*).
 
 4. Ajoutez une classe "*Controller*" à votre projet et déclarez celle-ci comme étant le contrôleur du fichier *fxml*.
 
     > Créez une classe "*Controller*" et liez les éléments modifiables de l'interface à des attributs de cette classe en utilisant l'annotation [*@FXML*](https://docs.oracle.com/javafx/2/get_started/fxml_tutorial.htm). Les noms des attributs doivent correspondre aux noms indiqués dans les champs *fx:id*, lors de la création de la fenêtre. Il vous faudra aussi lier une méthode "*Initialize()*".
-    > Ajoutez un champ *fx:controller="[chemin jusqu'au].Controller"* à l'intérieur de la balise correspondant au [*Pane*](https://openjfx.io/javadoc/17/javafx.graphics/javafx/scene/layout/Pane.html) principal (Vous pouvez vous aider de ce [*tutoriel*](https://github.com/polytech-ihm-et3/TP2_squelette/tree/main/slides/slides.pdf)).
+    > Ajoutez un champ *fx:controller="[chemin jusqu'au].Controller"* à l'intérieur de la balise correspondant au [*Pane*](https://openjfx.io/javadoc/17/javafx.graphics/javafx/scene/layout/Pane.html) principal (Vous pouvez vous aider du tutoriel dans le dossier *slides*).
 
 5. Examinez le contenu du fichier *FileSelector.java*.
 
@@ -41,9 +41,9 @@ L'interface de ce sélecteur de fichier doit contenir :
     >   - La méthode *getListParentRepositories(String path)* : cette méthode renvoie une [*ArrayList*](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html) contenant les chemins des dossiers parents d'un dossier courant, indiqué en paramètre. Par exemple, pour un dossier *C:\rep1\rep2\rep3\*, la méthode renverra les chemins suivants : *C:\*, *C:\rep1\* et *C:\rep1\rep2\*
     >   - La méthode *getContent(String path)* : cette méthode renvoie une [*ArrayList*](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html) contenant les différents éléments présents dans un dossier courant, indiqué en paramètre.
 
-6. Implémentez dans la méthode *initialize()* ce à quoi ressemblent le menu déroulant et de la liste au démarrage de l'application (à savoir qu'ils indiquent le dossier de l'utilisateur actuel de l'ordinateur, obtenable avec `System.getProperty("user.home")`).
+6. Implémentez dans la méthode *initialize()* ce à quoi ressemblent le menu déroulant (combo box) et la liste navigable (view list) au démarrage de l'application (à savoir qu'ils indiquent le dossier de l'utilisateur actuel de l'ordinateur, obtenable avec `System.getProperty("user.home")`).
 
-7. En modifiant la méthode "*initialize()*", faites en sorte que lorsque l'utilisateur sélectionne un dossier dans le menu déroulant, la liste navigable et le menu déroulant se mettent bien à jour (ils doivent alors représenter le nouveau dossier courant).
+7. En modifiant la méthode "*initialize()*", faites en sorte que lorsque l'utilisateur sélectionne un dossier dans le menu déroulant (combo box), la liste navigable et le menu déroulant se mettent bien à jour (ils doivent alors représenter le nouveau dossier courant).
 
 8. Faites en sorte que le bouton "*Open*" ne soit cliquable qu'à condition que l'un des éléments de la liste navigable soit sélectionné.
 
